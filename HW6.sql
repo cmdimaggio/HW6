@@ -109,13 +109,13 @@ BEGIN
 
         -- Step 2: Run the POINT QUERY you want to measure 
 			-- Make sure to comment or uncomment depending on which query you need to run
-		-- SET @sql_query = 'SELECT count(*) FROM accounts WHERE branch_name = ''Downtown'' AND account_type = ''Savings'';';
+	-- SET @sql_query = 'SELECT count(*) FROM accounts WHERE branch_name = ''Downtown'' AND account_type = ''Savings'';';
         
         -- Step 2: Run the RANGE query you want to measure
 			-- Make sure to comment or uncomment depending on which query you need to run
-		SET @sql_query = 'SELECT count(*) FROM accounts WHERE branch_name = ''Downtown'' AND balance BETWEEN 5000 AND 100000;';
+	SET @sql_query = 'SELECT count(*) FROM accounts WHERE branch_name = ''Downtown'' AND balance BETWEEN 5000 AND 100000;';
 
-		PREPARE dynamic_query FROM @sql_query;
+	PREPARE dynamic_query FROM @sql_query;
         EXECUTE dynamic_query;
         DEALLOCATE PREPARE dynamic_query;
 
