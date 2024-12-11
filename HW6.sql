@@ -41,7 +41,7 @@ show table status like 'accounts';
 -- make sure to right click in schemas to drop stored prodecdure after run!
 
 /* ***************************************************************************************************
-The procedure generates 100000 records for the accounts table, with the account_num padded to 5 digits.
+The procedure generates 50000 records for the accounts table, with the account_num padded to 5 digits.
 branch_name is randomly selected from one of the six predefined branches.
 balance is generated randomly, between 0 and 100,000, rounded to two decimal places.
 In order to change how many records are generated looks at comments in prodecure to show were to change numbers
